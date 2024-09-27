@@ -16,7 +16,7 @@ function renderProducts(products) {
     productList.innerHTML = '';
     products.forEach(product => {
         const productItem = document.createElement('div');
-        productItem.innerText = `${product.name} - ${product.price} - ${product.type} - ${product.unit} - ${product.date} - ${product.supplier}`;
+        productItem.innerText = `$1q{product.name} - ${product.price} - ${product.type} - ${product.unit} - ${product.date} - ${product.supplier}`;
         productList.appendChild(productItem);
     });
 }
@@ -27,15 +27,9 @@ function addProduct() {
         products.push({ name, price, type, unit, date, supplier });
         saveProducts(products);
         renderProducts(products);
-        document.getElementById('name').value = '';
-        document.getElementById('price').value = '';
-        document.getElementById('type').value = '';
-        document.getElementById('unit').value = '';
-        document.getElementById('date').value = '';
-        document.getElementById('supplier').value = '';
     }
     else {
-        alert('Iltimos, barcha maydonlarni to\'ldiring!');
+        alert('QOSHOLMADINKU JIGARIM');
     }
 }
 function searchProducts() {

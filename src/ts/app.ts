@@ -28,7 +28,7 @@ function renderProducts(products: Product[]): void {
     productList.innerHTML = '';
     products.forEach(product => {
         const productItem = document.createElement('div');
-        productItem.innerText = `${product.name} - ${product.price} - ${product.type} - ${product.unit} - ${product.date} - ${product.supplier}`;
+        productItem.innerText = `$1q{product.name} - ${product.price} - ${product.type} - ${product.unit} - ${product.date} - ${product.supplier}`;
         productList.appendChild(productItem);
     });
 }
@@ -43,14 +43,10 @@ function addProduct(): void {
         saveProducts(products);
         renderProducts(products);
 
-        (document.getElementById('name') as HTMLInputElement).value = '';
-        (document.getElementById('price') as HTMLInputElement).value = '';
-        (document.getElementById('type') as HTMLInputElement).value = '';
-        (document.getElementById('unit') as HTMLInputElement).value = '';
-        (document.getElementById('date') as HTMLInputElement).value = '';
-        (document.getElementById('supplier') as HTMLInputElement).value = '';
-    } else {
-        alert('Iltimos, barcha maydonlarni to\'ldiring!');
+      
+    }
+    else {
+        alert('QOSHOLMADINKU JIGARIM');
     }
 }
 
